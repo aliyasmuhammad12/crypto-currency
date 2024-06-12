@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./main.css";
 import { IoMdArrowDroprightCircle } from "react-icons/io";
-import { FaPhone } from "react-icons/fa";
+import { FaApple, FaGooglePlay, FaPhone } from "react-icons/fa";
 
 function Main() {
 
@@ -32,6 +32,10 @@ function Main() {
     }
   ];
   return (
+    <>
+    <div className="main-outer">
+
+    
     <div className="main">
       <nav>
         <div className="nav-inner">
@@ -55,12 +59,12 @@ function Main() {
           earn. Each step matters.
         </p>
         <div className="Earn-buttons">
-          <div className="playstore">
-            <img src={"/assets/playstore.png"} alt="" />
+          <div className="buttons">
+          <FaGooglePlay className="icon" />
             <button>Playstore</button>
           </div>
-          <div className="appstore">
-            <img src={"/assets/appstore.png"} alt="" />
+          <div className="buttons">
+          <FaApple className="icon" />
             <button>Appstore</button>
           </div>
         </div>
@@ -76,9 +80,9 @@ function Main() {
               <div className="numbers">
                 <h1>+112,256.60</h1>
                 <p>Kcal</p>
+                <h2>Calories burned</h2>
               </div>
               <div className="name">
-                <h1>Calories burned</h1>
               </div>
             </div>
           </div>
@@ -92,9 +96,9 @@ function Main() {
               <div className="numbers">
                 <h1>+1,600,000.35</h1>
                 <p>Meter(M)</p>
+                <h2>Calories burned</h2>
               </div>
               <div className="name">
-                <h1>Calories burned</h1>
               </div>
             </div>
           </div>
@@ -108,10 +112,9 @@ function Main() {
               <div className="numbers">
                 <h1>+112,256.60</h1>
                 <p>Kilogram(KG)</p>
+                <h2>Calories burned</h2>
               </div>
-              <div className="name">
-                <h1>Calories burned</h1>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -124,9 +127,9 @@ function Main() {
               <div className="numbers">
                 <h1>+112,256.60</h1>
                 <p>Users</p>
+                <h2>Calories burned</h2>
               </div>
               <div className="name">
-                <h1>Calories burned</h1>
               </div>
             </div>
           </div>
@@ -139,6 +142,7 @@ function Main() {
           <div className="circles">
             <div className="circle-inner">
               <img src={"/assets/Group 11.png"} alt="" />
+              <h3>Take a step</h3>
             </div>
             <div className="circle-inner-line">
               <p className="line"></p>
@@ -148,6 +152,7 @@ function Main() {
             </div>
             <div className="circle-inner">
               <img src={"/assets/Group 9.png"} alt="" />
+              <h3>Earn</h3>
             </div>
             <div className="circle-inner-line">
               <p className="line"></p>
@@ -157,12 +162,8 @@ function Main() {
             </div>
             <div className="circle-inner">
               <img src={"/assets/Group 10.png"} alt="" />
+              <h3>Complete the tasks</h3>
             </div>
-          </div>
-          <div className="circle-below">
-            <h3>Take a step</h3>
-            <h3>Earn</h3>
-            <h3>Complete the tasks</h3>
           </div>
         </div>
       </div>
@@ -294,7 +295,7 @@ function Main() {
           <h1>Our team</h1>
           <div className="team-card">
             <div className="team-inner-card">
-              <img src={"/assets/measum.jpg"} alt="" />
+              <img src={"/assets/measum.jpeg"} alt="" />
               <h4>MEasum Abbas</h4>
               <p>Web developer</p>
             </div>
@@ -304,7 +305,7 @@ function Main() {
               <p>Web developer</p>
             </div>
             <div className="team-inner-card">
-              <img src={"/assets/hasnain.jpg"} alt="" />
+              <img src={"/assets/hasnain.jpeg"} alt="" />
               <h4>Hasnain Abbas</h4>
               <p>Web developer</p>
             </div>
@@ -331,6 +332,7 @@ function Main() {
             ))}
       </div>
 
+    </div>
       <footer>
         <div className="footer-inner">
           <div className="first-link">
@@ -391,7 +393,8 @@ function Main() {
           <h2>@CopyRight 2021.Powered by Aliyas</h2>
          </div>
       </footer>
-    </div>
+      </div>
+      </>
   );
 }
 
