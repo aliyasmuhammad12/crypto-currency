@@ -342,6 +342,12 @@ nav .nav-inner {
   font-weight: 400;
   line-height: normal;
 }
+.cat-right img{
+  max-width: 361px;
+ height: 525px;
+ border-radius: 40px;
+
+}
 @media screen and (max-width:1080px) {
   .girl .cat-inner {
     /* display: flex;
@@ -612,13 +618,14 @@ th:last-child {
   font-weight: 400;
   line-height: normal;
 }
-.faq .faq-inner{
+.faq .faq-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
 }
+
 .accordian {
   width: 80%;
 }
@@ -633,17 +640,18 @@ th:last-child {
   font-weight: 800;
   line-height: normal;
 }
+
 .accordian-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: transform 0.9s ease;
   border-radius: 24px 24px 0px 0px;
   border: 2px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.08);
   padding: 24px 35px;
   gap: 10px;
 }
+
 .accordian-heading h3 {
   color: #fff;
   text-align: center;
@@ -653,12 +661,17 @@ th:last-child {
   font-weight: 800;
   line-height: normal;
 }
+
 .accordian-box {
   width: 100%;
   border-radius: 0px 0px 20px 20px;
   border: 2px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.08);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out, padding 0.8s ease-in-out;
 }
+
 .accordian-box p {
   color: rgba(255, 255, 255, 0.6);
   text-align: start;
@@ -669,14 +682,19 @@ th:last-child {
   font-weight: 400;
   line-height: normal;
 }
+
+.accordian-box.open {
+  max-height: 500px; 
+  padding: 20px;
+}
+
 .accordian-icon {
   font-size: 30px;
   cursor: pointer;
   color: #fff;
 }
-.accordian-icon.rotate{
-  transform: rotate(90deg);
-}
+
+
 footer{
   border-top: 2px solid rgba(255, 255, 255, 0.4);
   

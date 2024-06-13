@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./main.css";
-import { IoMdArrowDroprightCircle } from "react-icons/io";
+import { IoIosArrowDropdownCircle, IoIosArrowDroprightCircle } from 'react-icons/io';
 import { FaApple, FaGooglePlay, FaPhone } from "react-icons/fa";
 
 function Main() {
@@ -179,7 +179,7 @@ function Main() {
             </p>
           </div>
           <div className="cat-right">
-            <img src={"/assets/monster.png"} alt="" />
+            <img src={"/assets/coin.webp"} alt="" />
           </div>
         </div>
       </div>
@@ -314,23 +314,31 @@ function Main() {
       </div>
 
       <div className="faq">
-          <h1 className="top-heading">FAQ</h1>
-          {faqData.map((faq,index)=>(
+      <h1 className="top-heading">FAQ</h1>
+      {faqData.map((faq, index) => (
         <div className="faq-inner" key={index}>
           <div className="accordian">
-            <div className="accordian-heading" onClick={() => handleToggle(index)}>
+            <div className="accordian-heading">
               <h3>{faq.question}</h3>
-              <IoMdArrowDroprightCircle className="accordian-icon"/>
+              {activeAccordian === index ? (
+                <IoIosArrowDropdownCircle
+                  className="arrow accordian-icon rotate"
+                  onClick={() => handleToggle(index)}
+                />
+              ) : (
+                <IoIosArrowDroprightCircle
+                  className="arrow accordian-icon"
+                  onClick={() => handleToggle(index)}
+                />
+              )}
             </div>
-            {activeAccordian === index && (
-              <div className="accordian-box">
-                <p>{faq.answer}</p>
-              </div>
-            )}
+            <div className={`accordian-box ${activeAccordian === index ? 'open' : ''}`}>
+              <p>{faq.answer}</p>
+            </div>
           </div>
         </div>
-            ))}
-      </div>
+      ))}
+    </div>
 
     </div>
       <footer>
